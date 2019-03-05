@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Space\DraftScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -9,6 +10,15 @@ class Post extends Model
 {
     use SoftDeletes;
 
+    /**
+     * The boot method of a model
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new DraftScope());
+    }
     /**
      * Get the user for the blog article.
      *
@@ -36,7 +46,22 @@ class Post extends Model
      */
     public function tags()
     {
-        return $this->hasMany(Tag::class, 'post_tag_pivot');
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+
+    /**
+     * Check Authentication
+     * 
+     * @param $query
+     * @return mixed
+     */
+    public function scopeCheckAuth($query)
+    {
+        if (auth()->check() && auth()->user()->is_admin) {
+            $query->withoutGlobalScope(DraftScope::class);
+        }
+
+        return $query;
     }
 }
 

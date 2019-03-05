@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
     <!-- Fonts -->
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="app">
@@ -30,16 +31,6 @@
 
 <script>
   (function($) {
-"use strict"; // Start of use strict
-
-// Floating label headings for the contact form
-$("body").on("input propertychange", ".floating-label-form-group", function(e) {
-  $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-}).on("focus", ".floating-label-form-group", function() {
-  $(this).addClass("floating-label-form-group-with-focus");
-}).on("blur", ".floating-label-form-group", function() {
-  $(this).removeClass("floating-label-form-group-with-focus");
-});
 
 // Show the navbar when the page is scrolled up
 var MQL = 992;

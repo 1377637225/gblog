@@ -428,3 +428,113 @@ footer .copyright {
   padding: 25px 35px;
 }
 
+.list .media {
+  border-top: 1px solid rgba(34, 36, 38, 0.15);
+  margin: 0;
+  padding: 2em 0;
+}
+
+.list .media:first-child {
+  margin-top: 30px !important;
+  border: none;
+  padding-top: 0;
+}
+
+.list .media .media-left img {
+  border-radius: 5px;
+  width: 200px;
+}
+
+.list .media .media-body .media-heading > a {
+  color: #34495e;
+  font-size: 1.2rem;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.list .media .media-body .media-heading > a:hover {
+  color: #18bc9c;
+}
+
+.list .media .media-body .meta {
+  margin: 0.5em 0;
+  font-size: 1.4em;
+  line-height: 1em;
+  color: #7f8c8d;
+}
+
+.list .media .media-body .description {
+  margin-top: 0.6em;
+  font-size: 1.2em;
+  line-height: 1.4285em;
+  color: #95a5a6;
+}
+
+.list .media .media-body .extra {
+  margin-top: 15px;
+}
+
+.list .media .media-body .extra .info {
+  color: #95a5a6;
+  font-size: 1em;
+}
+
+.list .media .media-body .extra .info i {
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+.list .media .media-body .extra .info > a {
+  display: inline-block;
+  color: #18bc9c;
+}
+
+.list .media .media-body .extra > a {
+  margin: 0 5px;
+  background-color: #e8e8e8;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.list .media .media-body .extra > a > .label {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+  background-color: #e8e8e8;
+  background-image: none;
+  padding: 0.5833em 0.833em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  border: 0 solid transparent;
+  border-radius: 0.28571429rem;
+  transition: background 0.1s ease;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.list .media .media-body .extra > a > .label i {
+  padding-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .media {
+    display: block;
+  }
+
+  .list .media-left {
+    display: block;
+  }
+
+  .list .media-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 250px;
+  }
+
+  .list .media-body {
+    padding: 1.5em 0 0;
+  }
+}
+
